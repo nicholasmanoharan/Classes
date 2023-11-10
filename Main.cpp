@@ -12,7 +12,7 @@ void addMedia(std::vector<Media*>& mediaList) {
     std::cout << "3. Movie\n";
     int choice;
     std::cin >> choice;
-    std::cin.ignore(); // Clear newline from the input buffer
+    std::cin.ignore(); 
 
     std::string title, artistOrDirector, publisherOrRating;
     int year, durationOrRating;
@@ -22,7 +22,7 @@ void addMedia(std::vector<Media*>& mediaList) {
 
     std::cout << "Year: ";
     std::cin >> year;
-    std::cin.ignore(); // Clear newline from the input buffer
+    std::cin.ignore();
 
     if (choice == 1) { // Video Game inputs
         std::cout << "Publisher: ";
@@ -30,7 +30,7 @@ void addMedia(std::vector<Media*>& mediaList) {
 
         std::cout << "Rating: ";
         std::cin >> durationOrRating;
-        std::cin.ignore(); // Clear newline from the input buffer
+        std::cin.ignore(); 
 
         mediaList.push_back(new VideoGame(title, year, publisherOrRating, durationOrRating));
     } else if (choice == 2) { // Music inputs
@@ -39,7 +39,7 @@ void addMedia(std::vector<Media*>& mediaList) {
 
         std::cout << "Duration (in minutes): ";
         std::cin >> durationOrRating;
-        std::cin.ignore(); // Clear newline from the input buffer
+        std::cin.ignore(); 
 
         std::cout << "Publisher: ";
         std::getline(std::cin, publisherOrRating);
@@ -51,11 +51,11 @@ void addMedia(std::vector<Media*>& mediaList) {
 
         std::cout << "Duration (in minutes): ";
         std::cin >> durationOrRating;
-        std::cin.ignore(); // Clear newline from the input buffer
+        std::cin.ignore(); 
 
         std::cout << "Rating: ";
         std::cin >> publisherOrRating;
-        std::cin.ignore(); // Clear newline from the input buffer
+        std::cin.ignore(); 
 
         mediaList.push_back(new Movie(title, year, artistOrDirector, durationOrRating, std::stoi(publisherOrRating)));
     } else {
@@ -131,7 +131,7 @@ int main() {
 
         int choice;
         std::cin >> choice;
-        std::cin.ignore(); // Clear newline from the input buffer
+        std::cin.ignore(); 
 
         switch (choice) {
             case 1:
