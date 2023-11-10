@@ -1,3 +1,12 @@
+/*
+Nicholas Manoharan
+Mr. Galbraith
+11/9/2023
+Classes - Focusing on various classes to read in different media types from the user 
+and gives the option to add or delete different types
+
+*/
+
 #include <iostream>
 #include <vector>
 #include "Media.h"
