@@ -1,16 +1,21 @@
-#pragma once
-#include "Media.h"
+#include "VideoGames.h"
+#include <iostream>
 
-class VideoGame : public Media {
-public:
-    VideoGame(const std::string& title, int year, const std::string& publisher, int rating);
-    void displayInfo() const override;
-    bool search(const std::string& term) const override;
+VideoGames::VideoGames(const std::string& title, int year, const std::string& publusher, int rating) : Media (title, year), publisher(publisher), rating(rating) {}
 
-    const std::string& getPublisher() const;
-    int getRating() const;
+void VideoGame::displayInfo() const{
+    Media::displayInfo();
+    std::cout << "Publisher: " << publisher << "\nRating: " << rating << std::endl;
+}
 
-private:
-    std::string publisher;
-    int rating;
-};
+bool VideoGames::Search(const std::string& term) const {
+    return Media::search(term) || (publisher.find(term) !=npos || (std::to_string(rating).find(term) != std::string::npos);
+}
+
+const std::string& VideoGames::getPublisher() const {
+    return publisher;
+}
+
+int VideoGames::getRating() const {
+    return rating
+}
